@@ -49,7 +49,7 @@ async function train_animation(iteration = 0)
 		for (var i = 0; i < 3; i++)
 		{
 			WA.room.setTiles([
-				{ x: starting_cell[0] - parseInt(iteration/5) + j, y: starting_cell[1] + i, tile: 2587 + 724 + j + (45*i) + (iteration%5*6) + 1, layer: "train" },
+				{ x: starting_cell[0] - parseInt(iteration/5) + j, y: starting_cell[1] + i, tile: 1 + j + 30*i + (iteration%5*6), layer: "train" },
 			])
 		}
 	}
