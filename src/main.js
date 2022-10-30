@@ -41,7 +41,7 @@ function entrance () {
 async function train_animation(iteration = 0) 
 {
 	var starting_cell = [69,26];
-	var animation_length = (69 * 5) + 2; //69 tiles, 5 different frames
+	var animation_length = (69 * 4) + 2; //69 tiles, 5 different frames
 	var drop_tile = 34 + 3 ; //drop the player at tile 35 (the train is 3 tiles long)
 
 	for (var j = 0; j < 6; j++)
@@ -49,15 +49,15 @@ async function train_animation(iteration = 0)
 		for (var i = 0; i < 3; i++)
 		{
 			WA.room.setTiles([
-				{ x: starting_cell[0] - parseInt(iteration/5) + j, y: starting_cell[1] + i, tile: 1 + j + 30*i + (iteration%5*6), layer: "train" },
+				{ x: starting_cell[0] - parseInt(iteration/4) + j, y: starting_cell[1] + i, tile: 1 + j + 30*i + (iteration%4*6), layer: "train" },
 			])
 		}
 	}
 	
 	// create a gaussian distribution, centered in 0 standard deviation of 4 and a maximun of 2000
-	var time_out = 20 + gaussian(drop_tile - (iteration/5), 0, 2) * 100;
+	var time_out = 20 + gaussian(drop_tile - (iteration/4), 0, 2) * 100;
 
-	if (iteration / 5 == drop_tile)
+	if (iteration / 4 == drop_tile)
 	{
 		time_out = 2000;
 
