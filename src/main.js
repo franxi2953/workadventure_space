@@ -27,13 +27,6 @@ WA.onInit().then(() => {
 	addRemoveBlocks([[38,18],[40,18],[42,18]], [], "fence", "flag_u", "above_player_3");
 
 	entrance();
-
-	//report the player position each 2000ms
-	setInterval(async function() {
-		var pos = await WA.player.getPosition();
-		console.log("You are at " + pos["x"] + ", " + pos["y"]);
-	}
-	, 2000);
 }
 );
 
@@ -57,6 +50,7 @@ async function train_animation(iteration = 0)
 		{
 			WA.room.setTiles([
 				{ x: starting_cell[0] - parseInt(iteration/5) + j, y: starting_cell[1] + i, tile: 2587 + 724 + j + (45*i) + (iteration%5*6), layer: "train" },
+				{ x: starting_cell[0] - parseInt(iteration/5) + j, y: starting_cell[1] + i, tile:"fence", layer: "above_player_1" },
 			])
 		}
 	}
