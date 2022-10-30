@@ -970,7 +970,7 @@
         {
          "name":"backup_script",
          "type":"string",
-         "value":"https:\/\/franxi2953.github.io\/wa_lab\/src\/js\/main.js"
+         "value":""
         }, 
         {
          "name":"mapCopyright",
@@ -985,7 +985,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"\/src\/main.js"
+         "value":""
         }, 
         {
          "name":"scriptDisableModuleSupport",
