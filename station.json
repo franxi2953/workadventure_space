@@ -174,12 +174,6 @@
                  "id":104,
                  "name":"exit",
                  "opacity":1,
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"\/station_building.json"
-                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":70,
