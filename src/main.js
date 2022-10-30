@@ -65,7 +65,7 @@ async function train_animation(iteration = 0)
 	}
 	
 	// create a gaussian distribution, centered in 0 standard deviation of 4 and a maximun of 2000
-	var time_out = 20 + gaussian(drop_tile - (iteration/4), 0, 2) * 100;
+	var time_out = 20 + gaussian(drop_tile - (iteration/4), 0, 4) * 100;
 
 	if (iteration / 4 == drop_tile)
 	{
