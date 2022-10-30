@@ -53,6 +53,16 @@ async function train_animation(iteration = 0)
 			])
 		}
 	}
+
+	if (iteration%4 == 0)
+	{
+		for (var i = 0; i < 3; i++)
+		{
+			WA.room.setTiles([
+				{ x: starting_cell[0] - parseInt(iteration/4) + 6, y: starting_cell[1] + i, tile: null, layer: "train" },
+			])
+		}
+	}
 	
 	// create a gaussian distribution, centered in 0 standard deviation of 4 and a maximun of 2000
 	var time_out = 20 + gaussian(drop_tile - (iteration/4), 0, 2) * 100;
