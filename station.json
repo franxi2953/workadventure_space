@@ -178,7 +178,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"\/station_building.json"
+                         "value":"https:\/\/franxi2953.github.io\/workadventure_space\/station_building.json"
                         }],
                  "type":"tilelayer",
                  "visible":true,
