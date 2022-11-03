@@ -88,6 +88,17 @@ async function train_animation(iteration = 0)
 
 			//enable player controls
 			WA.controls.restorePlayerControls();
+
+			//draw elcome text on the screen
+			WA.ui.displayBubble("Welcome to the station!", "Welcome to the station!", [
+				{
+					label: "OK",
+					className: "primary",
+					callback: (username) => {
+						WA.ui.closeBubble();
+					}
+				}
+			]);
 		}, 1000);
 	}
 
